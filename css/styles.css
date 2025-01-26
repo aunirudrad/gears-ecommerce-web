@@ -57,6 +57,16 @@
     margin-top: 16px;
     /* margin-bottom: 170px; */
 }
+.btn-2 {
+    background-color: #E02C6D;
+    border: none;
+    /* border-radius: 41px; */
+    padding: 10px 24px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 16px;
+    /* margin-bottom: 170px; */
+}
 
 .navbar {
     margin: 85px auto 0 auto;
@@ -185,6 +195,64 @@
     max-width: 196px;
 }
 
+.features-container{
+    max-width: 1140px;
+    margin: 100px auto;
+    justify-content: space-between;
+    gap: 96px;
+}
+
+.features{
+    margin: 23px 0;
+}
+
+.features-title{
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 60px;
+    color: #0A0826;
+}
+
+.features-description{
+    max-width: 500px;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 16px 0;
+    color: #6C6C6C;
+}
+
+footer{
+    background-color: #0A0826;
+}
+
+.footer-texts{
+    margin: 0 auto;
+    max-width: 265px;
+    text-align: center;
+    color: #ffffff;
+    padding: 50px;
+    
+}
+.footer-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.footer-description{
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #D9DBE1;
+    line-height: 24px;
+    
+}
+
+.footer-container .social-icons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
 
 @media screen and (max-width: 576px) {
     .default-margin {
@@ -256,6 +324,12 @@
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
         gap: 30px;
+    }
+
+    .features-container{
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
     }
 
 
