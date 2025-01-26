@@ -13,25 +13,41 @@
     font-style: normal;
 }
 
+.inter-regular {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  
+
 /* shared flex */
-.default-margin{
+.default-margin {
     max-width: calc(100% - 240px);
     margin: 0 auto;
-    
+
 }
-.display-flex{
+
+.display-flex {
     display: flex;
 }
 
 /* shared colors */
 
-.dark-01{
+.dark-01 {
     color: #3A3A3A;
 }
 
 
 /* btn-styles */
-.btn-1{
+.btn-1 {
     background-color: #E02C6D;
     border: none;
     border-radius: 41px;
@@ -39,28 +55,30 @@
     color: #ffffff;
     font-weight: 700;
     margin-top: 16px;
-    margin-bottom: 170px;
+    /* margin-bottom: 170px; */
 }
-.navbar{
+
+.navbar {
     margin: 85px auto 0 auto;
     gap: 490px;
     justify-content: space-between;
 }
 
-.navbar-title{
+.navbar-title {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-.nav-items ul{
+.nav-items ul {
     gap: 34px;
     justify-content: space-between;
 }
-.nav-items ul li{
+
+.nav-items ul li {
     list-style: none;
 }
 
-.nav-items ul li a{
+.nav-items ul li a {
     text-decoration: none;
     color: #3A3A3A;
     font-weight: 600;
@@ -68,84 +86,176 @@
 
 /* banner section styles */
 
-.banner-container{
+.banner-container {
     background-image: url(../images/Circle\ design.svg);
     background-repeat: no-repeat;
-    background-position: right;
+    background-position-y: 50px;
+    background-position-x: right;
     justify-content: space-between;
 }
 
-.banner-img{
-    margin: 180px 40px 100px 0;
+.banner-img {
+    margin: 80px 45px 80px 0;
 }
 
-.banner-container .banner-img img{
+.banner-container .banner-img img {
     width: 100%;
 }
 
-.banner-texts{
+.banner-texts {
     padding: 185px 133px 170px 0;
 }
-.banner-text-title{
+
+.banner-text-title {
     font-weight: 700;
     font-size: 3.25rem;
-    max-width: 582px;
+    /* max-width: 582px; */
 }
-.banner-text-description{
+
+.banner-text-description {
     font-weight: 600;
     max-width: 505px;
+    margin: 16px 0;
+}
+
+/* sponsors section */
+.sponsors {
+    max-width: 1110px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 60px;
+    justify-items: center;
+    margin: 50px auto;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.sponsors img {
+    width: 100%;
+    padding: 41px 0;
+}
+
+.collection-container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.collection-title {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 70px;
+}
+
+/* collection styles */
+
+.collection-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    padding: 18px 14px;
+    border-radius: 5px;
+    background-color: #fff;
+    max-width: 330px;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 40px;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    color: #18191F;
+}
+
+.card-amount {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.87);
+
+}
+
+.rating, .card-description{
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #787885;
+    max-width: 196px;
 }
 
 
 @media screen and (max-width: 576px) {
-    .default-margin{
+    .default-margin {
         max-width: 100%;
         margin: 0 auto;
-        
+
     }
-    .navbar{
+
+    .navbar {
         flex-direction: column;
         align-items: center;
         gap: 30px;
         margin: 35px auto 22px auto;
     }
-    .nav-items ul{
+
+    .nav-items ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
     }
-    .banner-container{
+
+    .banner-container {
         flex-direction: column-reverse;
     }
-    .banner-container{
+
+    .banner-container {
         background-image: url(../images/Circle\ design.svg);
         background-size: contain;
-        background-repeat: no-repeat;
-        background-position: 0px 0;
-        justify-content: space-between;
-        
+
+
+
     }
-    .banner-texts{
+
+    .banner-texts {
         padding: 0;
         text-align: center;
-        
+
     }
-    .btn-1{
-        background-color: #E02C6D;
-        border: none;
-        border-radius: 41px;
-        padding: 10px 24px;
-        color: #ffffff;
-        font-weight: 700;
-        margin-top: 16px;
-        /* margin-bottom: 20px; */
+
+    .banner-img {
+        max-width: 300px;
+        margin: 120px auto;
     }
-    .banner-img{
-        margin: 22px auto;
-    }
-    
-    .banner-container .banner-img img{
+
+    .banner-container .banner-img img {
         width: 100%;
+    }
+
+    .sponsors {
+        margin: 20px auto;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+        border: none;
+
+    }
+
+    .sponsors img {
+        width: 75%;
+        padding: 0;
+    }
+
+    .collection-container {
+        margin: 50px 15px;
+    }
+    .collection-card {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        gap: 30px;
     }
 
 
